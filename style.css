@@ -539,7 +539,7 @@ span {
     max-height: 200px;
     justify-content: left;
     align-items: baseline;
-    padding: 5rem 5rem;
+    padding: 3rem 3rem;
 }
 
 .service-info h4 {
@@ -552,74 +552,8 @@ span {
     font-size: 1.3rem;
     font-weight: 600;
     max-height: 100px;
-    line-height: 1;
+    line-height: 1.5;
     margin: auto;
-}
-
-.testimonials {
-    background-color: var(--second-bg-color);
-}
-
-.testimonials-box {
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.testimonials-box .heading {
-    margin-bottom: 5rem;
-}
-
-.testimonials-box img {
-    width: 15rem;
-    border-radius: 50%;
-    border: 3px solid var(--main-color);
-    box-shadow: 0 0 25px var(--main-color);
-}
-
-.wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 3fr);
-    gap: 3rem;
-}
-
-.testimonials-item {
-    min-height: 400px;
-    max-width: 450px;
-    background: rgba(0, 0, 0, 0.7);
-    border: 3px solid rgba(238, 238, 238, 0.2);
-    border-radius: 2rem;
-    margin: 0 2rem;
-    padding: 30px 60px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-    color: white;
-    transition: .4s ease-in-out;
-}
-
-.testimonials-item:hover {
-    border: 3px solid var(--main-color);
-    transform: translateX(-10px) scale(1.03);
-    box-shadow: 0 0 50px var(--main-color);
-}
-
-.testimonials-item h2 {
-    font-size: 2rem;
-}
-
-.testimonials-item p {
-    font-size: 1.1rem;
-}
-
-.rating i {
-    color: yellow;
-    font-size: 1.45rem;
 }
 
 .contact {
