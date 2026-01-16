@@ -454,7 +454,7 @@ span {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: white;
     text-shadow: 0 0 5px var(--main-color);
     font-size: 30px;
     font-weight: 600;
