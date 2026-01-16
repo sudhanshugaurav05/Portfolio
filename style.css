@@ -314,27 +314,27 @@ span {
 
     0%,
     20% {
-        content: "Frontend Designer";
+        content: "Software Engineer";
     }
 
     21%,
     40% {
-        content: "Web Designer";
+        content: "Web Developer";
     }
 
     41%,
     60% {
-        content: "UI / UX Designer";
+        content: "Full-Stack Engineer";
     }
 
     61%,
     80% {
-        content: "Web Developer";
+        content: "Application Developer";
     }
 
     81%,
     100% {
-        content: "Software Tester";
+        content: "Database Engineer";
     }
 }
 
@@ -394,6 +394,144 @@ span {
 .education {
     padding: 50px 5px 0 5px;
     background: var(--second-bg-color);
+}
+
+.certificate_project {
+    height: 100%;
+    width: 100%;
+    background: var(--bg-color);
+}
+
+.certificate_project h2 {
+    margin-bottom: 3rem;
+    color: white;
+    text-align: center;
+}
+
+.certificate_project .c_p {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+}
+
+.certificate_project .c_p .certificate-container {
+    max-height: 490px;
+    background: var(--second-bg-color);
+    width: 48%;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.certificate_project .c_p .certificate-container::-webkit-scrollbar {
+    width: 5px;
+}
+
+.certificate-container .certificate-box {
+    background: var(--second-bg-color);
+    padding: 2px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 20px;
+    height: 100px;
+    transition: 0.3s ease-in-out;
+    border: 2px solid var(--main-color);
+}
+
+.certificate-box:hover {
+    box-shadow: 0 0 10px var(--main-color);
+
+}
+
+.certificate-container .certificate-box a {
+    height: 100%;
+    border-radius: 5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 5px var(--main-color);
+    font-size: 30px;
+    font-weight: 600;
+    background: url("imaage/certificate/cr1.png") no-repeat center;
+    background-size: cover;
+    position: relative;
+}
+
+.certificate-container .certificate-box a::before {
+    content: "";
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.5;
+
+}
+
+.certificate_project .c_p .project-container {
+    max-height: 490px;
+    background: var(--second-bg-color);
+    width: 48%;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.project-container .project-box {
+    padding: 2px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 20px;
+    height: 190px;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 2px !important;
+    border: 2px solid var(--main-color);
+    z-index: 1;
+}
+
+video {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+    left: 0;
+    top: 0;
+    border-radius: 5px;
+    opacity: 0.5;
+}
+
+.project-box:hover {
+    box-shadow: 0 0 10px var(--main-color);
+
+}
+
+.certificate_project .c_p .project-container::-webkit-scrollbar {
+    width: 5px;
+}
+
+.project-container .project-box a {
+    font-size: 30px;
+    font-weight: 600;
+    text-decoration: underline;
+    transition: ease-in-out 0.3s;
+    color: white;
+}
+
+.project-container .project-box a:hover {
+    color: var(--main-color);
 }
 
 .timeline-itmes {
@@ -499,7 +637,7 @@ span {
 /* for side scrollbar */
 
 .services {
-    background: var(--bg-color);
+    background: var(--second-bg-color);
     color: black;
 }
 
@@ -806,8 +944,31 @@ span {
         font-size: 1.7rem;
     }
 }
-@media(max-width:608px){
-    .social-icon{
+
+@media(max-width:608px) {
+    .social-icon {
         display: none;
     }
+
+    .certificate_project .c_p {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+}
+
+.certificate_project .c_p .certificate-container {
+    max-height: 461px;
+    background: var(--second-bg-color);
+    width: 100%;
+    padding: 11px;
+    overflow-y: auto;
+}
+
+.certificate_project .c_p .project-container {
+    max-height: 461px;
+    background: var(--second-bg-color);
+    width: 100%;
+    padding: 11px;
+    overflow-y: auto;
+}
 }
