@@ -878,9 +878,15 @@ span {
     .footer {
         padding: 2rem 3%;
     }
+    .cursor{
+        display:none;
+    }
 }
 
 @media(max-width: 850px) {
+    .cursor{
+        display:none;
+    }
     #menu-bar {
         display: block;
     }
