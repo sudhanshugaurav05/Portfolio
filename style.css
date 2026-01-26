@@ -17,6 +17,16 @@
     --main-color: #038BE1;
 }
 
+::-moz-selection { 
+    background: var(--main-color); 
+    color: var(--bg-color); 
+}
+
+::selection { 
+    background: var(--main-color);
+    color: var(--bg-color); 
+}
+
 html {
     font-size: 70%;
     overflow-x: hidden;
