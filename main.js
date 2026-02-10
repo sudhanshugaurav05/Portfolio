@@ -2,11 +2,7 @@ let menubtn = document.querySelector("#menu-bar");
 let navBar = document.querySelector(".navbar");
 let sections = document.querySelectorAll("section");
 let navLinks = document.querySelectorAll("header nav a");
-document.getElementById("contactForm").addEventListener("submit", function (e) {
-  e.preventDefault(); // stop page reload
 
-  alert("Form submitted successfully!");
-});
 window.onscroll = () => {
   sections.forEach((sec) => {
     let top = window.scrollY;
