@@ -32,3 +32,51 @@ document.addEventListener("mousemove", (e) => {
   cursor.style.left = e.clientX + "px";
   cursor.style.top = e.clientY + "px";
 });
+
+(function () {
+  emailjs.init("0mNi-Pp7SiU5CoiYC"); // ✅ ADDED Public Key
+})();
+
+let form = document.querySelector(".form");
+form.addEventListener("submit", async (e) => {
+  e.preventDefault(); // ea page refresh nahi hone dega
+
+  let name = form.Name.value;
+  let email = form.Email.value;
+  let message = form.Message.value;
+  let subject = form.Subject.value;
+  let phone = form.Phone.value;
+
+  let data = await fetch("https://sheetdb.io/api/v1/o2jeove6osc3w", {
+    method: "POST",
+    mode: "cors",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      data: [
+        {
+          Name: name,
+          Email: email,
+          Message: message,
+          Subject: subject,
+          Phone: phone,
+        },
+      ],
+    }),
+  });
+
+  emailjs
+    .send("service_y9c1hn1", "template_527b42e", {
+      Name: name, // ⚠ Must match template variable
+      Email: email,
+    })
+    .then(function (response) {
+      console.log("Email Sent Successfully ✅", response);
+    })
+    .catch(function (error) {
+      console.log("Email Failed , error");
+    });
+
+  form.reset();
+});
